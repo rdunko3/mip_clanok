@@ -11,6 +11,7 @@
 \usepackage{cite} % na správne citovanie
 \usepackage{subcaption} % na vedľajšie obrázky
 \usepackage{wrapfig} % na plávajúce obrázky
+\usepackage{amsmath} % chybajuci usepackage
 
 \pagestyle{headings}
 
@@ -48,6 +49,23 @@ Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlen
 Dôležité súvislosti sú uvedené v častiach~\ref{dolezita} a~\ref{dolezitejsia}.
 Záverečné poznámky prináša časť~\ref{zaver}.
 
+\[
+\begin{bmatrix}
+a & b & c & d \\
+e & f & g & h \\
+i & j & k & l \\
+m & n & o & p \\
+q & r & s & t
+\end{bmatrix}
+\]
+\[
+a_n = a_{n-1} + a_{n-2} + \dots + a_1 + a_0
+\]
+
+\[
+x = \frac{1}{1+x+x^2+x^3+x^4+\dots}
+\]
+
 \section{Nejaká časť} \label{nejaka}
 
 Z obr.~\ref{f:rozhod} je všetko jasné. 
@@ -71,23 +89,6 @@ Z obr.~\ref{f:rozhod} je všetko jasné.
 \end{subfigure}
 \caption{Dva grafy vedľa seba}
 \end{figure*}
-
-\[
-\begin{bmatrix}
-a & b & c & d \\
-e & f & g & h \\
-i & j & k & l \\
-m & n & o & p \\
-q & r & s & t
-\end{bmatrix}
-\]
-\[
-a_n = a_{n-1} + a_{n-2} + \dots + a_1 + a_0
-\]
-
-\[
-x = \frac{1}{1+x+x^2+x^3+x^4+\dots}
-\]
 
 
 \section{Dôležitá časť} \label{dolezita}
