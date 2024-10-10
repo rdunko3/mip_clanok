@@ -3,15 +3,14 @@
 \documentclass[10pt,twocolumn,twoside,slovak,a4paper]{article}
 
 \usepackage[slovak]{babel}
-%\usepackage[T1]{fontenc}
 \usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
+\usepackage{graphicx} % na vkladanie obrázkov
 \usepackage{url} % príkaz \url na formátovanie URL
 \usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
-
-\usepackage{cite}
-%\usepackage{times}
+\usepackage{cite} % na správne citovanie
+\usepackage{subcaption} % na vedľajšie obrázky
+\usepackage{wrapfig} % na plávajúce obrázky
 
 \pagestyle{headings}
 
@@ -21,11 +20,9 @@
 	{\small Slovenská technická univerzita v Bratislave}\\
 	{\small Fakulta informatiky a informačných technológií}\\
 	{\small \texttt{xdunko@stuba.sk}}
-	}
+}
 
-\date{\small 10. oktober 2024} % upravte
-
-
+\date{\small 10. október 2024}
 
 \begin{document}
 
@@ -35,37 +32,14 @@
 \ldots
 \end{abstract}
 
-
-
 \section{Úvod}
 Vplyv odporúčacích systémov na personalizované nakupovanie v elektronickom obchode
 
+Odporúčacie systémy sú dnes neodmysliteľnou súčasťou elektronického obchodu. Je ťažké nájsť obchod, ktorý nevyužíva tieto výdobytky doby. Tieto systémy využívajú algoritmy na analýzu správania zákazníkov a vytvárajú personalizované odporúčania produktov, ktoré zvyšujú šance na dokončenie nákupu. Mojím cieľom je skúmať, ako tieto systémy ovplyvňujú nákupné správanie spotrebiteľov, a to z pohľadu rozhodovacieho procesu aj celkového zážitku z nakupovania.
 
-Odporúčacie systémy sú dnes neodmysliteľnou súčasťou elektronického obchodu. Je ťažké nájsť obchod, ktorý nevyužíva tieto výdobytky doby. Tieto systémy využívajú algoritmy na analýzu správania zákazníkov a vytvárajú personalizované odporúčania produktov, ktoré zvyšujú šance na dokončenie nákupu. Mojím cieľom je skúmať, ako tieto systémy ovplyvňujú nákupné správanie spotrebiteľov, a to z pohľadu rozhodovacieho procesu aj celkového zážitku z nakupovania. 
 Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlený v časti~\ref{nejaka}.
 Dôležité súvislosti sú uvedené v častiach~\ref{dolezita} a~\ref{dolezitejsia}.
 Záverečné poznámky prináša časť~\ref{zaver}.
-
-\usepackage{subcaption}
-
-\begin{figure*}[h!]
-\centering
-\begin{subfigure}{.45\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{graf1.pdf}
-  \caption{Graf 1}
-\end{subfigure}%
-\hfill
-\begin{subfigure}{.45\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{graf2.pdf}
-  \caption{Graf 2}
-\end{subfigure}
-\caption{Dva grafy vedľa seba}
-\end{figure*}
-
-
-
 
 \section{Nejaká časť} \label{nejaka}
 
@@ -73,71 +47,38 @@ Z obr.~\ref{f:rozhod} je všetko jasné.
 
 \begin{figure*}[tbh]
 \centering
-%\includegraphics[scale=1.0]{diagram.pdf}
-Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný plávajúci objekt. Po vytvorení diagramu zrušte znak \texttt{\%} pred príkazom \verb|\includegraphics| označte tento riadok ako komentár (tiež pomocou znaku \texttt{\%}).
 \caption{Rozhodujúci argument.}
 \label{f:rozhod}
 \end{figure*}
 
+\section{Dva obrázky vedľa seba}
 
-
-\section{Iná časť} \label{ina}
-
-Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
-
-Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
-
-
-\subsection{Nejaké vysvetlenie} \label{ina:nejake}
-
-Niekedy treba uviesť zoznam:
-
-\begin{itemize}
-\item jedna vec
-\item druhá vec
-	\begin{itemize}
-	\item x
-	\item y
-	\end{itemize}
-\end{itemize}
-
-Ten istý zoznam, len číslovaný:
-
-\begin{enumerate}
-\item jedna vec
-\item druhá vec
-	\begin{enumerate}
-	\item x
-	\item y
-	\end{enumerate}
-\end{enumerate}
-
-
-\subsection{Ešte nejaké vysvetlenie} \label{ina:este}
-
-\paragraph{Veľmi dôležitá poznámka.}
-Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom.
-
-
+\begin{figure*}[h!]
+\centering
+\begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{graf1.pdf} % Prvý graf
+  \caption{Graf 1}
+\end{subfigure}%
+\hfill
+\begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{graf2.pdf} % Druhý graf
+  \caption{Graf 2}
+\end{subfigure}
+\caption{Dva grafy vedľa seba}
+\end{figure*}
 
 \section{Dôležitá časť} \label{dolezita}
-
-
-
+Dôležitý obsah článku.
 
 \section{Ešte dôležitejšia časť} \label{dolezitejsia}
+Ešte dôležitejší obsah článku.
 
+\section{Záver} \label{zaver}
+Záver článku.
 
+\bibliography{literatura} % odkaz na súbor literatura.bib
+\bibliographystyle{plain} % štýl bibliografie
 
-
-\section{Záver} \label{zaver} % prípadne iný variant názvu
-
-
-
-%\acknowledgement{Ak niekomu chcete poďakovať\ldots}
-
-
-% týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
-\bibliography{literatura}
-\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
 \end{document}
